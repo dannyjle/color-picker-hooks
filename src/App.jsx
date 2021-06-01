@@ -13,14 +13,20 @@ export function App() {
 
   const newStyle = { backgroundColor: newBackgroundColor }
 
+  function handleRandomizer() {
+    hue: setHue(Math.floor(Math.random() * (359 - 1) + 1))
+    saturation: setSaturation(Math.floor(Math.random() * (359 - 1) + 1))
+    lightness: setLightness(Math.floor(Math.random() * (359 - 1) + 1))
+  }
+
   return (
     <>
       <main>
         <h1>Color Selector!</h1>
         <h4>Pick your color:</h4>
-        {/* <h5>
-          <button onClick={handleButtonClick}>Randomizer</button>
-        </h5> */}
+        <h5>
+          <button onClick={handleRandomizer}>Randomizer</button>
+        </h5>
         <div className="colorBox" style={newStyle}>
           {`hsl(${hue},${saturation}%,${lightness}%)`}
         </div>
