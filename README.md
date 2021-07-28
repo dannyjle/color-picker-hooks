@@ -1,3 +1,3 @@
 # Color Picker Hooks
 
-![SDG](./docs/button.png)
+Dynamic color picker that is randomized everytime you refresh! 
